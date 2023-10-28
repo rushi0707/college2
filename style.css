@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body 
+{
+    background-color: black;
+}
+
+/********************* Header **************************/
+
+#header
+{
+    height: 100vh; /* Relative to 100% of the height of the viewport i.e. Total visible area */
+    width: 100%;    /* and % is for getting 100% size of parent */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/main1.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+
+}
+
+nav img 
+{
+    width: 150px;
+}
+
+nav ul li 
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative; 
+}
+
+nav ul li:hover::after
+{
+    width: 100%;
+}
+
+.links ul li::after
+{
+    content: '';
+    height: 4px;
+    width: 0;
+    background: #b536f4;
+    display: block;
+    margin: auto;
+    transition: all;
+    transition: 0.5s;
+}
+
+nav ul li a
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.textbox
+{
+    width: 90%;
+    position: absolute;  /* absolute means relative to parent here parent is header section */
+    top: 50%;            /* we cant apply top bottom left right position withut specifying position: property */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.textbox h1
+{
+    font-size: 62px;
+}
+
+.textbox p
+{
+    font-size: 20px;
+    color:white;
+    padding: 12px 0 40px; /*top right left bottom*/
+}
+
+.textbox a 
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    display: inline-block;
+    padding: 13px 34px;
+    font-size: 17px;
+    position: relative;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.textbox a:hover
+{
+    background: #b536f4;
+    border: 1px solid #b536f4;
+}
+
+/**************** Responsiveness for header ******************/
+
+nav .fa-solid
+{
+    display: none;
+}
+
+@media(max-width:600px)
+{
+    .textbox h1
+    {
+        font-size: 20px;
+    }
+
+    .textbox p
+    {
+        font-size: 12px;
+    }
+
+    .links ul li 
+    {
+        display: block;
+    }
+
+    .links
+    {
+        position: absolute;  /* absolute means relative to parent here parent is header section */
+        right: -200px;          /* we cant apply top bottom left right position withut specifying position: property */
+        top: 0;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa-solid
+    {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .links ul 
+    {
+        padding: 20px;
+    }
+}
+
+
+/*********************************** courses ******************************************/
+
+.course
+{
+    width: 80%;
+    padding: 100px;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+.course h1
+{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.course p 
+{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.courseCol
+{
+    flex-basis: 31%;
+    background: rgb(178, 136, 216);
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: black;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.courseCol:hover
+{
+    background: linear-gradient(#cfa9e6,#b536f4);
+    transform: scale(1.2,1.2);
+}
+
+.courseCol h3 
+{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+/******************* make course responsive *************************/
+@media(max-width:600px)
+{
+    .course .row 
+    {
+        flex-direction: column;
+        font-size: 12px;
+    }
+}
+
+/****************** campus ***********************/
+
+.campus
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    
+}
+
+.row 
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.campusCol
+{
+    flex-basis: 31%;
+  
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.campus img 
+{
+    width: 100%;
+    display: block;
+}
+
+/*here we added .layer class inside.fCol to add layer on each block
+Initially it is not visible but when we hover over it will visible*/
+
+/*same layer we used in facilities also*/
+
+ .layer
+{
+    color: black;
+    background: transparent; /*initially transperent */
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+}
+ .layer:hover
+{
+    background: rgba(187, 129, 238, 0.7);  /*visible when hover over it*/
+    
+}
+
+.layer h3
+{
+    opacity: 0; /*initially city name is not visible*/
+    position: absolute;
+    bottom: 0; /*intially at botttom*/
+    left: 50%;
+
+    transform: translateX(-50%); /*come to middle of image*/
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.layer:hover h3
+{
+    bottom: 30%; /*it come from bottom to middle*/
+    opacity: 1;
+}
+
+@media(max-width:600px)
+{
+    .campus .row 
+    {
+        flex-direction: column;
+    }
+}
+
+/*************** facilities *****************/
+
+.facilities
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+}
+
+.row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fCol
+{
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fCol img 
+{
+    width: 100%;
+    display: block;
+}
+
+/*here we added .layer class inside.campusCol to add layer on each block
+Initially it is not visible but when we hover over it will visible*/
+
+.fCol h3
+{
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;   
+}
+
+@media(max-width:600px)
+{
+    .facilities .row 
+    {
+        flex-direction: column;
+    }
+}
+
+/********************  Contact ***********************/
+
+.contact
+{
+    width: 80%;
+    margin: 100px auto;
+    padding: 100px auto;
+    background-image: linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)),url("images/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-color: #b536f4;
+    text-align: center;
+
+}
+
+.contact h1
+{
+    color: white;
+    margin-bottom: 40px;
+    padding: 15px;
+
+}
+
+.contact a 
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    display: inline-block;
+    padding: 13px 34px;
+    font-size: 13px;
+    position: relative;
+    transition: all;
+    transition-duration: 0.5s;
+    margin: 20px;
+}
+
+.contact a:hover 
+{
+    background:#b536f4;
+    background-color:#b536f4;
+    border-color: #b536f4;
+}
+
+@media(max-width:600px)
+{
+    .contact h1 
+    {
+        font-size: 24px;
+    }
+}
+
+/***********************Footer*********************/
+
+.footer
+{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+
+}
+
+.footer h2
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 400px;
+}
+
+.icon .fa-brands 
+{
+    color: #b536f4;
+    margin: 10px 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: all;
+}
+
+.icon .fa-brands:hover 
+{
+    transform: scale(1.4,1.4);
+}
+
+.fa-heart
+{
+    color: #f44336;
+}
+
+
+/******************  ABOUT US PAGE  ************************/
+
+/******************* sub-header *************************/
+
+.sub-header
+{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color:white
+}
+
+.sub-header h1
+{
+    margin-top: 50px;
+}
+
+.aboutUs
+{
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutCol
+{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.aboutCol img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutCol h1
+{
+    padding-top: 0;
+    color: #b536f4;
+}
+
+.aboutCol p 
+{
+    padding: 15px 0 25px; /*top right down left*/
+}
+
+ .red-btn
+{
+    border: 1px solid #cfa9e6;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.red-btn:hover
+{
+    background:#b536f4;
+    color: white;
+    border-color: #b536f4;
+}
+
+/******************  CONTACT US PAGE  ************************/
+
+/******************* location *************************/
+
+.location
+{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe
+{
+    width: 100%;
+}
+
+.contactUs
+{
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.row 
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-Col1
+{
+    flex-basis: 45%;
+    margin-bottom: 30px;
+}
+
+.col1
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.col1 .fa-solid
+{
+    font-size: 28px;
+    color:#b536f4;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.col1 p 
+{
+    padding: 0;
+    font-weight: 200;
+}
+
+.col1 h5 
+{
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color:rgb(224, 195, 231);
+}
+
+.contact-col2
+{
+    flex-basis: 45%;
+}
+
+.contact-col2 input, .contact-col2 textarea, .contact-col2 button
+{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #cfa9e6;
+    box-sizing: border-box;
+}
