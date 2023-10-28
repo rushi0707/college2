@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style (1).css">
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/dbc2580aa4.js" crossorigin="anonymous"></script> <!--for adding font-->
+</head>
+<body>
+    <div class="sub-header">
+        <nav>
+            <a href="#"><img src="images/logo.png" alt=""></a>
+            <div class="links" id="link">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> <!--we first have to include kit.fontawesome in script below title-->
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Course</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1> <!--all same as index.html only change is delete all except header and footer
+                            and add new information ABOUT US -->
+    </div>
+
+    <!--------contact us content -->
+
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.897116509384!2d79.53083859999998!3d17.983522999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbb37aee6c3%3A0xf1b2c37fcb8fefce!2sNational%20Institute%20of%20Technology%2C%20Warangal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1698308761332!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contactUs">
+        <div class="row">
+        <div class="contactCol1">
+            <div class="col1">
+                <i class="fa-solid fa-house"></i>
+                <span>
+                    <h5>Hanamkonda , Warangal</h5>
+                    <p>Telangana , india</p>
+                </span>
+            </div>
+
+            <div class="col1">
+                <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <h5>rushinit07@gmail.com</h5>
+                    <p>Email Us Your Query</p>
+                </span>
+            </div>
+
+            <div class="col1">
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>+91 8830737947</h5>
+                    <p>Monday to saturday , 10AM to 6PM </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="contact-col2">
+            <form action="contact.php" method="POST">
+                <input type="text" name="Name" placeholder="Enter your name" required>
+                <input type="text" name="email" placeholder="Enter your Email" required>
+                <input type="text" name="subject" placeholder="Enter subject" required>
+                <textarea name="text" placeholder="your message" rows="8"></textarea>
+                <button type="submit" class="hero-btn red-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    
+
+    <!------------ footer ------------->
+
+    <div class="footer">
+        <h2>About Us</h2>
+        <p>National Institute of Technology, Warangal (Deemed University), formerly known as Regional Engineering College, was established in 1959. <br>
+            Pandit Jawaharlal Nehru laid the foundation stone for this institute on October 10, 1959, the first in the chain of 31 NITs (formerly known as RECs) in the country.</p>
+        <div class="icon">
+            <a href="https://instagram.com/__rushi__0707?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rushikeshkhiste07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/__rushi__0707?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/rushikeshkhiste07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-facebook"></i></a>    
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Rushikesh</p>
+    </div>
+</body>
+</html>

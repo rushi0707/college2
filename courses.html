@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style (1).css">
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/dbc2580aa4.js" crossorigin="anonymous"></script> <!--for adding font-->
+</head>
+<body>
+    <div class="sub-header">
+        <nav>
+            <a href="#"><img src="images/logo.png" alt=""></a>
+            <div class="links" id="link">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> <!--we first have to include kit.fontawesome in script below title-->
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Course</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Departments </h1><!--all same as index.html only change is delete all except header and footer
+                                and add new information ABOUT US -->
+    </div>
+
+       <!------------Campus----------->
+
+       <div class="campus">
+        <div class="row">
+            <div class="campusCol">
+                <img src="images/ece3.jpeg" alt="">
+                <div class="layer"><!--here we added .layer class inside.fCol to add layer on each block-->
+                                    <!----Initially it is not visible but when we hover over it will visible-->
+                    <h3>Biotechnology</h3>
+                </div>
+            </div>
+            <div class="campusCol">
+                <img src="images/civil3.jpeg" alt="">
+                <div class="layer">
+                    <h3>Civil</h3>
+                </div>
+            </div>
+            <div class="campusCol">
+                <img src="images/met3.jpeg" alt="">
+                <div class="layer">
+                    <h3>Metallurgy</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="campus">
+        <div class="row">
+            <div class="campusCol">
+                <img src="images/cs1.jpeg" alt="">
+                <div class="layer"><!--here we added .layer class inside.fCol to add layer on each block-->
+                                    <!----Initially it is not visible but when we hover over it will visible-->
+                    <h3>Computer Science</h3>
+                </div>
+            </div>
+
+            <div class="campusCol">
+                <img src="images/.jpeg" alt="">
+                <div class="layer">
+                    <h3>Mechanical</h3>
+                </div>
+            </div>
+
+            <div class="campusCol">
+                <img src="images/bio3.jpeg" alt="">
+                <div class="layer">
+                    <h3>Chemical</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ footer ------------->
+
+    <div class="footer">
+        <h2>About Us</h2>
+        <p>National Institute of Technology, Warangal (Deemed University), formerly known as Regional Engineering College, was established in 1959. <br>
+            Pandit Jawaharlal Nehru laid the foundation stone for this institute on October 10, 1959, the first in the chain of 31 NITs (formerly known as RECs) in the country.</p>
+        <div class="icon">
+            <a href="https://instagram.com/__rushi__0707?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rushikeshkhiste07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/__rushi__0707?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/rushikeshkhiste07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-facebook"></i></a>    
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Rushikesh</p>
+    </div>
+</body>
+</html>
